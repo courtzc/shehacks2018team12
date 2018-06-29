@@ -176,7 +176,6 @@ if(isset($_POST['button'])){
             foreach($value as $mac => $detail) {
                 if(trim($detail['name']) == trim($selectedBtn)) {
                        $cmd = ($selectedType == 'sound')? "omxplayer /".$path."  --vol 1000" : 'curl -X POST https://maker.ifttt.com/trigger/dash_button_press/with/key/felqP2zXnKwE5LsqkLXZf7koMVNYDP9P2L_k4iXWQkJ';
-                        //$detail['cmd'] = $cmd;
 						$newJson[$key][$mac]['cmd'] = $cmd;
                 }
             }
@@ -193,6 +192,3 @@ if(isset($_POST['button'])){
    
 }
 ?>
-
-
-
