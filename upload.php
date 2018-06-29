@@ -213,7 +213,7 @@ if(isset($_POST['button'])){
             foreach($value as $mac => $detail) {
                 if(trim($detail['name']) == trim($selectedBtn)) {
 					$path = $_SERVER['DOCUMENT_ROOT']."shehacks2018team12/".$path;
-                       $cmd = ($selectedType == 'sound')? "omxplayer /".$path."  --vol 1000" : 'curl -X POST https://maker.ifttt.com/trigger/dash_button_press/with/key/felqP2zXnKwE5LsqkLXZf7koMVNYDP9P2L_k4iXWQkJ';
+                       $cmd = ($selectedType == 'sound')? "omxplayer ".$path."  --vol 1000" : 'curl -X POST https://maker.ifttt.com/trigger/dash_button_press/with/key/felqP2zXnKwE5LsqkLXZf7koMVNYDP9P2L_k4iXWQkJ';
 						$newJson[$key][$mac]['cmd'] = $cmd;
                 }
             }
