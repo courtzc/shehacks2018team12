@@ -10,7 +10,7 @@
 	<title>"I can"</title>
 
 
-	<style>
+	<!--style>
 		.custom-select {
 		  position: relative;
 		  font-family: Arial;
@@ -63,7 +63,7 @@
 		.select-items div:hover, .same-as-selected {
 		  background-color: rgba(0, 0, 0, 0.1);
 		}
-	</style>
+	</style-->
 </head>
 
 <body>
