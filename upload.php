@@ -8,6 +8,9 @@
 	<meta name="author" content="author"/> 
 	<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 	<title>"I can"</title>
 	<style>
 	html, body { height:100%; }
@@ -24,23 +27,26 @@ height: 100%;
   padding:15px;
 }
 .login-btn { position:fixed; top:15px; right:15px; }
+.img {
+    margin-top: 88px;
+	padding-left: 195px;
+}
 	</style>
 
 </head>
 
 <body>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
 
 <!-- Optional theme 
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
-<a class="btn btn-default login-btn" href="#loginform">I Can </a>
 <section id="loginform" class="outer-wrapper">
 
  <div class="inner-wrapper">
 <div class="container">
   <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
+  <div class="col-sm-4 img"><img src="images.jpeg" /></div>
+    <div class="col-sm-4">
       <h2 class="text-center">I Can</h2>
       <form role="form" enctype="multipart/form-data" action="upload.php" method="POST">
 	  <div class="form-group">
