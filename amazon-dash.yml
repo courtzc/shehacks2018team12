@@ -1,10 +1,10 @@
 # amazon-dash.yml
 # ---------------
+ 
 settings:
   # On seconds. Minimum time that must pass between pulsations.
   delay: 10
- 
- devices:
+devices:
   68:54:fd:d6:25:64:  # You can know the mac of your device with the discovery command
     name: Pistachiosn  # You can put the name you want
     cmd: omxplayer /home/pi/audiobooks/Trains.mp3   # Command to execute
