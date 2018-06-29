@@ -6,174 +6,71 @@
 	<meta name="description" content="description"/>
 	<meta name="keywords" content="keywords"/> 
 	<meta name="author" content="author"/> 
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<title>"I can"</title>
+	<style>
+	html, body { height:100%; }
 
-    <style>
-        * {
-			margin: 0;
-			padding: 0;
-		}
+.outer-wrapper { 
+display: table;
+width: 100%;
+height: 100%;
+}
 
-	    input {
-			color: #555;
-			font: normal 1.1em "Lucida Sans Unicode",sans-serif;
-		}
-
-		p,cite,code,ul {
-			font-size: 1.2em;
-			padding-bottom: 1.2em;
-		}
-
-		ul {margin-left: 1.2em;}
-		li {list-style-image: url(img/li.gif);}
-		h1 {font-size: 1.4em;}
-
-		blockquote {
-			background: #FFF;
-			border-bottom: 1px solid #EEE;
-			border-top: 1px solid #EEE;
-			color: #333;
-			display: block;
-			font-size: 0.9em;
-			margin-bottom: 1.2em;
-			padding: 6px 12px;
-		}
-
-		blockquote p {padding: 3px 0;}
-		h1,h2,h3 {color: #654;}
-
-		.container {
-			background: url(img/bgcontainer.gif) repeat-y;
-			margin: 0 auto;
-			width: 702px;
-		}
-
-
-		.top {
-			background: #545692;
-			padding: 10px;
-			font-family: "Bebas Neue", arial;
-			font-size: 72px;
-			width: 700px;
-			border: 5px solid black;
-		}
-	
-		.custom-select select {
-            background: #1793B8;
-            width: 268px;
-            padding: 5px;
-			font-family: "Bebas Neue", arial;
-            font-size: 16px;
-            line-height: 1;
-            border: 0;
-            border-radius: 0;
-            height: 34px;
-            -webkit-appearance: none;
-        }
-
-		.content {
-			background: #AFCE58;
-			font-family: "Bebas Neue", arial;
-			font-size: 36px;
-		}
-
-		.header {
-			background: url(img/header.jpg) no-repeat;
-			height: 180px;
-			margin: auto;
-			width: 630px;
-		}
-
-		.main {
-			background: #F4B812 url(img/bg.gif) repeat-y center top;
-			color: #333;
-			font: normal 62.5% "Lucida Sans Unicode",sans-serif;
-		}
-
-    </style>
+.inner-wrapper {
+  display:table-cell;
+  vertical-align:middle;
+  padding:15px;
+}
+.login-btn { position:fixed; top:15px; right:15px; }
+	</style>
 
 </head>
 
 <body>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
+<!-- Optional theme 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
+<a class="btn btn-default login-btn" href="#loginform">I Can </a>
+<section id="loginform" class="outer-wrapper">
+
+ <div class="inner-wrapper">
 <div class="container">
-
-	<div class="top">
-		<a href="index.html"><span>I Can</span></a>
-	</div>
-	
-	<div class="header"></div>
-		
-	<div class="main">
-		<form enctype="multipart/form-data" action="upload.php" method="POST">
-
-		<div class="item">
-
-			<div class="content">
-
-				<h1>Select  button</h1>
-
-				<div class="custom-select" style="width:200px;">
-
-					<select name="button">
-						<option value="Cliff">Cliff</option>
-						<option value="Goldfish">Goldfish</option>
-						<option value="Pistachiosn">Pistachiosn</option>
-						<option value="Hefty">Hefty</option>
-					</select>
-
-				</div>
-
-			</div>
-
-		</div>
-		
-		<div class="item">
-
-			<div class="content">
-
-				<h1>Choose button type</h1>
-
-				<div class="custom-select" style="width:200px;">
-
-					<select name ="buttonType">
-						<option value="sound">Sound</option>
-						<option value="light">Light</option>
-					</select>
-    
-				</div>
-
-			</div>
-
-		</div>
-
-		<div class="item">
-
-			<div class="content">
-
-				<h1>Upload</h1>
-
-				<div class="custom-select" style="width:200px;">
-		
-					<p>Upload file</p>
-					<input type="file" name="fileName"></input> <br/>
-					<input type="submit" value="submit"></input>
-    
-				</div>
-
-			</div>
-
-		</div>
-
-		</form>
-	</div>
-	
-	<div class="clearer"><span></span></div>
-
-	<div class="footer">&copy; 2006 <a href="index.html">Website.com</a>. Valid <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>. Template design by <a href="http://templates.arcsin.se">Arcsin</a>
-	</div>
-
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h2 class="text-center">I Can</h2>
+      <form role="form" enctype="multipart/form-data" action="upload.php" method="POST">
+	  <div class="form-group">
+		<label for="exampleInputEmail1">Select Button</label>
+		<select name="button" class="form-control">
+			<option value="Cliff">Cliff</option>
+			<option value="Goldfish">Goldfish</option>
+			<option value="Pistachiosn">Pistachiosn</option>
+			<option value="Hefty">Hefty</option>
+		</select>
+	  </div>
+	  <div class="form-group">
+		<label for="exampleInputEmail1">Select Button Type</label>
+		<select name ="buttonType" class="form-control">
+			<option value="sound">Sound</option>
+			<option value="light">Light</option>
+		</select>
+	  </div>
+	  <div class="form-group">
+		<label for="exampleInputEmail1">Upload File</label>
+		<input type="file" class="form-control" name="fileName"></input>
+	  </div>
+		<button type="submit" class="btn btn-default">Submit</button>
+</form>
+    </div>
+  </div>
 </div>
+</div>
+
+</section>
 
 </body>
 
