@@ -186,6 +186,8 @@ if(isset($_POST['button'])){
 	$fp = fopen($jsonfile, 'w');
 	fwrite($fp, json_encode($newJson));
 	fclose($fp);
+	
+	$output = shell_exec('./update_config.sh');
 
     
    
