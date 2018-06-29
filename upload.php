@@ -14,7 +14,7 @@
 			background: transparent;
 			padding: 10px;
 			font-family: "Bebas Neue", arial;
-			font-size: 72px;
+			font-size: 36px;
 			width: 700px;
 			border: 5px solid black;
 		}
