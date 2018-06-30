@@ -23,23 +23,31 @@
 			font-size: 1.2em;
 			padding-bottom: 1.2em;
 		}
+
 		ul {margin-left: 1.2em;}
 		li {list-style-image: url(img/li.gif);}
 		h1 {font-size: 1.4em;}
 
 		blockquote {
-		background: #FFF;
-		border-bottom: 1px solid #EEE;
-		border-top: 1px solid #EEE;
-		color: #333;
-		display: block;
-		font-size: 0.9em;
-		margin-bottom: 1.2em;
-		padding: 6px 12px;
+			background: #FFF;
+			border-bottom: 1px solid #EEE;
+			border-top: 1px solid #EEE;
+			color: #333;
+			display: block;
+			font-size: 0.9em;
+			margin-bottom: 1.2em;
+			padding: 6px 12px;
 		}
 
 		blockquote p {padding: 3px 0;}
 		h1,h2,h3 {color: #654;}
+
+		.container {
+			background: url(img/bgcontainer.gif) repeat-y;
+			margin: 0 auto;
+			width: 702px;
+		}
+
 
 		.top {
 			background: #545692;
