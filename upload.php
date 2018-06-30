@@ -10,16 +10,20 @@
 	<title>"I can"</title>
 
     <style>
-        .top {
-			background: transparent;
+        * {
+			margin: 0;
+			padding: 0;
+		}
+	
+		.top {
+			background: #545692;
 			padding: 10px;
 			font-family: "Bebas Neue", arial;
-			font-size: 36px;
+			font-size: 72px;
 			width: 700px;
 			border: 5px solid black;
 		}
-		
-		
+	
 		.custom-select select {
             background: #1793B8;
             width: 268px;
@@ -34,9 +38,22 @@
         }
 
 		.content {
-			background: transparent;
+			background: #AFCE58;
 			font-family: "Bebas Neue", arial;
-			font-size: 16px;
+			font-size: 36px;
+		}
+
+		.header {
+			background: url(img/header.jpg) no-repeat;
+			height: 180px;
+			margin: auto;
+			width: 630px;
+		}
+
+		.main {
+			background: #F4B812 url(img/bg.gif) repeat-y center top;
+			color: #333;
+			font: normal 62.5% "Lucida Sans Unicode",sans-serif;
 		}
 
     </style>
@@ -119,6 +136,9 @@
 	
 	<div class="clearer"><span></span></div>
 
+	<div class="footer">&copy; 2006 <a href="index.html">Website.com</a>. Valid <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> &amp; <a href="http://validator.w3.org/check?uri=referer">XHTML</a>. Template design by <a href="http://templates.arcsin.se">Arcsin</a>
+	</div>
+
 </div>
 
 </body>
@@ -154,8 +174,8 @@ if(isset($_POST['button'])){
       {
             foreach($value as $mac => $detail) {
                 if(trim($detail['name']) == trim($selectedBtn)) {
-					$path = $_SERVER['DOCUMENT_ROOT']."/shehacks2018team12/".$path;
-                       $cmd = ($selectedType == 'sound')? "omxplayer ".$path." --vol 1000" : 'curl -X POST https://maker.ifttt.com/trigger/dash_button_press/with/key/felqP2zXnKwE5LsqkLXZf7koMVNYDP9P2L_k4iXWQkJ';
+					$path = $_SERVER['DOCUMENT_ROOT']."shehacks2018team12/".$path;
+                       $cmd = ($selectedType == 'sound')? "omxplayer /".$path."  --vol 1000" : 'curl -X POST https://maker.ifttt.com/trigger/dash_button_press/with/key/felqP2zXnKwE5LsqkLXZf7koMVNYDP9P2L_k4iXWQkJ';
 						$newJson[$key][$mac]['cmd'] = $cmd;
                 }
             }
