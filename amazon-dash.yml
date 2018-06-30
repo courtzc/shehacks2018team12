@@ -7,12 +7,12 @@ settings:
 devices:
   68:54:fd:d6:25:64:  # You can know the mac of your device with the discovery command
     name: Pistachiosn  # You can put the name you want
-    cmd: omxplayer /home/pi/audiobooks/Trains.mp3   # Command to execute
+    cmd: omxplayer /home/pi/audiobooks/Trains.mp3 --vol 1000  # Command to execute
     user: pi  # System user. Necessary if it is executed as root
 
   ac:63:be:63:92:1b:  # You can know the mac of your device with the discovery command
     name: Hefty  # You can put the name you want
-    cmd: omxplayer /home/pi/audio-samples/deepbark.mp3   # Command to execute
+    cmd: omxplayer /home/pi/audio-samples/deepbark.mp3  --vol 1000 # Command to execute
     user: pi  # System user. Necessary if it is executed as root
 
   44:65:0d:e1:96:7c:  # You can know the mac of your device with the discovery command
@@ -22,7 +22,7 @@ devices:
     
   44:65:0d:0b:0f:0b:  # You can know the mac of your device with the discovery command
     name: Cliff  # You can put the name you want
-    cmd: omxplayer /home/pi/audio-samples/Crow.mp3   # Command to execute
+    cmd: omxplayer /home/pi/audio-samples/Crow.mp3  --vol 1000  # Command to execute
     user: pi  # System user. Necessary if it is executed as root
 
 
