@@ -6,7 +6,6 @@
 	<meta name="description" content="description"/>
 	<meta name="keywords" content="keywords"/> 
 	<meta name="author" content="author"/> 
-	<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
 	<title>"I can"</title>
 
     <style>
