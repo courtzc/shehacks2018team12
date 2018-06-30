@@ -13,7 +13,34 @@
 			margin: 0;
 			padding: 0;
 		}
-	
+
+	    input {
+			color: #555;
+			font: normal 1.1em "Lucida Sans Unicode",sans-serif;
+		}
+
+		p,cite,code,ul {
+			font-size: 1.2em;
+			padding-bottom: 1.2em;
+		}
+		ul {margin-left: 1.2em;}
+		li {list-style-image: url(img/li.gif);}
+		h1 {font-size: 1.4em;}
+
+		blockquote {
+		background: #FFF;
+		border-bottom: 1px solid #EEE;
+		border-top: 1px solid #EEE;
+		color: #333;
+		display: block;
+		font-size: 0.9em;
+		margin-bottom: 1.2em;
+		padding: 6px 12px;
+		}
+
+		blockquote p {padding: 3px 0;}
+		h1,h2,h3 {color: #654;}
+
 		.top {
 			background: #545692;
 			padding: 10px;
