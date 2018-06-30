@@ -10,10 +10,21 @@
 	<title>"I can"</title>
 
     <style>
-        .custom-select select {
-            background: transparent;
+        .top {
+			background: transparent;
+			padding: 10px;
+			font-family: "Bebas Neue", arial;
+			font-size: 72px;
+			width: 700px;
+			border: 5px solid black;
+		}
+		
+		
+		.custom-select select {
+            background: #1793B8;
             width: 268px;
             padding: 5px;
+			font-family: "Bebas Neue", arial;
             font-size: 16px;
             line-height: 1;
             border: 0;
@@ -21,6 +32,13 @@
             height: 34px;
             -webkit-appearance: none;
         }
+
+		.content {
+			background: transparent;
+			font-family: "Bebas Neue", arial;
+			font-size: 36px;
+		}
+
     </style>
 
 </head>
@@ -97,36 +115,6 @@
 		</div>
 
 		</form>
-	</div>
-
-	<div class="navigation">
-
-		<h1>Something</h1>
-		<ul>
-			<li><a href="index.html">pellentesque</a></li>
-			<li><a href="index.html">sociis natoque</a></li>
-			<li><a href="index.html">semper</a></li>
-			<li><a href="index.html">convallis</a></li>
-		</ul>
-
-		<h1>Another thing</h1>
-		<ul>
-			<li><a href="index.html">consequat molestie</a></li>
-			<li><a href="index.html">sem justo</a></li>
-			<li><a href="index.html">semper</a></li>
-			<li><a href="index.html">sociis natoque</a></li>
-		</ul>
-
-		<h1>Third and last</h1>
-		<ul>
-			<li><a href="index.html">sociis natoque</a></li>
-			<li><a href="index.html">magna sed purus</a></li>
-			<li><a href="index.html">tincidunt</a></li>
-			<li><a href="index.html">consequat molestie</a></li>
-		</ul>
-
-		  
-
 	</div>
 	
 	<div class="clearer"><span></span></div>
