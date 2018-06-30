@@ -1,0 +1,27 @@
+{
+  "settings": {
+    "delay": 10
+  },
+  "devices": {
+    "68:54:fd:d6:25:64": {
+      "name": "Pistachiosn",
+      "cmd": "omxplayer /home/pi/audiobooks/Trains.mp3 --vol 1000",
+      "user": "pi"
+    },
+    "ac:63:be:63:92:1b": {
+      "name": "Hefty",
+      "cmd": "omxplayer /home/pi/audio-samples/deepbark.mp3  --vol 1000",
+      "user": "pi"
+    },
+    "44:65:0d:e1:96:7c": {
+      "name": "Goldfish",
+      "cmd": "curl -X POST https://maker.ifttt.com/trigger/dash_button_press/with/key/felqP2zXnKwE5LsqkLXZf7koMVNYDP9P2L_k4iXWQkJ",
+      "user": "pi"
+    },
+    "44:65:0d:0b:0f:0b": {
+      "name": "Cliff",
+      "cmd": "omxplayer /home/pi/audio-samples/Crow.mp3  --vol 1000",
+      "user": "pi"
+    }
+  }
+}
