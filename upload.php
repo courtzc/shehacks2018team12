@@ -2,12 +2,68 @@
 <html>
 
 <head>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
-<meta name="description" content="description"/>
-<meta name="keywords" content="keywords"/> 
-<meta name="author" content="author"/> 
-<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
-<title>"I can"</title>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1"/>
+	<meta name="description" content="description"/>
+	<meta name="keywords" content="keywords"/> 
+	<meta name="author" content="author"/> 
+	<link rel="stylesheet" type="text/css" href="default.css" media="screen"/>
+	<title>"I can"</title>
+
+
+	<style>
+		.custom-select {
+		  position: relative;
+		  font-family: Arial;
+		}
+		
+		.custom-select select {
+		  display: none;
+		}
+		
+		.select-selected {
+		  background-color: DodgerBlue;
+		}
+
+		.select-selected:after {
+		  position: absolute;
+		  content: "";
+		  top: 14px;
+		  right: 10px;
+		  width: 0;
+		  height: 0;
+		  border: 6px solid transparent;
+		  border-color: #fff transparent transparent transparent;
+		}
+
+		.select-selected.select-arrow-active:after {
+		  border-color: transparent transparent #fff transparent;
+		  top: 7px;
+		}
+
+		.select-items div,.select-selected {
+		  color: #ffffff;
+		  padding: 8px 16px;
+		  border: 1px solid transparent;
+		  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+		  cursor: pointer;
+		}
+
+		.select-items {
+		  position: absolute;
+		  background-color: DodgerBlue;
+		  top: 100%;
+		  left: 0;
+		  right: 0;
+		  z-index: 99;
+		}
+
+		.select-hide {
+		  display: none;
+		}
+		.select-items div:hover, .same-as-selected {
+		  background-color: rgba(0, 0, 0, 0.1);
+		}
+	</style>
 </head>
 
 <body>
@@ -15,7 +71,7 @@
 <div class="container">
 
 	<div class="top">
-		<a href="index.html"><span>Bitter Sweet</span></a>
+		<a href="index.html"><span>I Can</span></a>
 	</div>
 	
 	<div class="header"></div>
@@ -25,12 +81,11 @@
 
 		<div class="item">
 
-
 			<div class="content">
 
 				<h1>Select  button</h1>
 
-				<div class="body">
+				<div class="custom-select" style="width:200px;">
 
 					<select name="button">
 						<option value="Cliff">Cliff</option>
@@ -47,16 +102,11 @@
 		
 		<div class="item">
 
-			<div class="date">
-				<div>SEP</div>
-				<span>30</span>
-			</div>
-
 			<div class="content">
 
 				<h1>Choose button type</h1>
 
-				<div class="body">
+				<div class="custom-select" style="width:200px;">
 
 					<select name ="buttonType">
 						<option value="sound">Sound</option>
@@ -71,16 +121,11 @@
 
 		<div class="item">
 
-			<div class="date">
-				<div>SEP</div>
-				<span>30</span>
-			</div>
-
 			<div class="content">
 
 				<h1>Upload</h1>
 
-				<div class="body">
+				<div class="custom-select" style="width:200px;">
 		
 					<p>Upload file</p>
 					<input type="file" name="fileName"></input> <br/>
@@ -138,13 +183,11 @@
 
 
 <?PHP
-
 /*  echo $dir = "uploads/";
   $a = scandir($dir);
   $a = array_diff(scandir($dir), array('.', '..'));
   print_r($a);
 */
-
 if(isset($_POST['button'])){
 	$jsonfile = "amazon-dash.json";
     $selectedBtn = $_POST['button'];
@@ -154,19 +197,16 @@ if(isset($_POST['button'])){
     
     if(!empty($_FILES['fileName']))
       {
-
         $path = "uploads/";
         $ext = pathinfo($_FILES['fileName']['name'], PATHINFO_EXTENSION);
         $newName = $selectedBtn.".".$ext;
         $path = $path.$newName;
-
         if(move_uploaded_file($_FILES['fileName']['tmp_name'], $path)) {
           echo "The file ".  $newName. " has been uploaded";
         } else{
             echo "There was an error uploading the file, please try again!";
         }
       }
-
 	$newJson = array();
     foreach($json_a as $key => $value)
     {
@@ -188,11 +228,7 @@ if(isset($_POST['button'])){
 	fclose($fp);
 	
 	$output = shell_exec('./update_config.sh');
-
     
    
 }
 ?>
-
-
-
